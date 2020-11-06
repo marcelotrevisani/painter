@@ -2,4 +2,8 @@ gidgethub
 requests
 cachetools
 aiohttp
-setuptools-scm
+setuptools_scm
+pytest
+pytest-cov
+pytest-xdist
+pip

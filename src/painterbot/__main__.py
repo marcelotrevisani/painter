@@ -41,8 +41,13 @@ async def main(request):
         traceback.print_exc(file=sys.stderr)
         return web.Response(status=500)
 
-if __name__ == "__main__":
+
+def init_webapp():
     app = web.Application()
     app.router.add_post("/", main)
     print(f"Running on PORT: {PORT}")
     web.run_app(app, port=PORT)
+
+
+if __name__ == "__main__":
+    init_webapp()

@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  painter:
+  painterbot:
     container_name: painterbot
     env_file:
       - .env
@@ -10,7 +10,11 @@ services:
     ports:
       - "${PORT}:${PORT}"
     volumes:
-      - .:/painter
+      - .:/painterbot
+      - /painterbot/.git
     command: >
-      python -c pip install -e /painter
-      sh -c "python /painter/__main__.py"
+      sh -c "
+        ls -la &&
+        python -m pip install -e . &&
+        python /painterbot/src/painterbot/__main__.py
+      "
