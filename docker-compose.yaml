@@ -11,10 +11,10 @@ services:
       - "${PORT}:${PORT}"
     volumes:
       - .:/painterbot
-      - /painterbot/.git
+#      - /painterbot/.git
     command: >
       sh -c "
-        ls -la &&
-        python -m pip install -e . &&
-        python /painterbot/src/painterbot/__main__.py
+        echo https://${GH_AUTH}:x-oauth-basic@github.com > ~/.git-credentials &&
+        python3 -m pip install -e . &&
+        python3 /painterbot/src/painterbot/__main__.py
       "

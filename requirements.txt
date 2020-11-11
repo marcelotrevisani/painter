@@ -7,3 +7,6 @@ pytest
 pytest-cov
 pytest-xdist
 pip
+GitPython
+pre-commit
+gcg

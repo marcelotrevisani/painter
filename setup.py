@@ -12,7 +12,7 @@ setup(
     author_email='marceloduartetrevisani@gmail.com',
     description='Bot example',
     python_requires=">=3.7",
-    install_requires=["gidgethub", "cachetools", "aiohttp"],
+    install_requires=["gidgethub", "cachetools", "aiohttp", "gitpython", "pre-commit", "gcg"],
     setup_requires=["setuptools_scm"],
     extras_require={"testing": ["pytest", "mock", "pytest-cov"]},
     entry_points={
